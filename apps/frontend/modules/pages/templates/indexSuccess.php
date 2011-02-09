@@ -1,4 +1,12 @@
-<p><a class="button" href="<?php echo url_for('pages_new'); ?>"><?php echo __('Add'); ?></a></p>
+<?php if ($sf_user->isAuthenticated()): ?>
+<div id="menu">
+<ul>
+<li><?php echo link_to('New page ', 'pages_new') ?></li>
+<li><?php echo link_to('Logout', 'sf_guard_signout') ?></li>
+</ul>
+</div>
+<?php endif ?>
+
 
 <?php if ($pages->count()) { ?>
 

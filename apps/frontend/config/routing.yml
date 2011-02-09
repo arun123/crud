@@ -4,6 +4,6 @@ pages:
 
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: welcome, action: index }
 
 
