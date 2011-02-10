@@ -13,8 +13,6 @@
 Sed nisi leo, commodo non, pharetra sit amet, consequat ut, nunc.</p>
         </div>
       </div>
-    
-    
     </div>
     <div id="content">
     	<div id="cont">
@@ -85,4 +83,4 @@ Sed nisi leo, commodo non, pharetra sit amet, consequat ut, nunc.</p>
                     </div>
             </div>
         </div>
-</div>
+         </div>

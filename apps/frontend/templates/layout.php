@@ -16,13 +16,18 @@
 			<ul>
 			  <li class="active"><?php echo link_to('Home', '/') ?></li>
 			  <li><?php echo link_to('pages', 'pages') ?></li>
+			  
 				<li><a href="#">Services</a></li>
 				<li><a href="#">Contact</a></li>
+				<?php if ($sf_user->isAuthenticated()): ?>
+			  <li><?php echo link_to('Logout', 'sf_guard_signout') ?></li>
+			  <?php endif ?>
 			</ul>
 		</div>
 	</div>
+	
     <?php echo $sf_content ?>
-  
+   
     <div id="footer_lt">
     </div>
     <div id="footer">

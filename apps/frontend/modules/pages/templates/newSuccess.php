@@ -1,3 +1,4 @@
+<div id="content">
 <fieldset class="form_css">
   <form action="<?php echo url_for('pages_create'); ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data"' ?>>
     <ul class="form_css">
@@ -7,3 +8,4 @@
     </ul>
   </form>
 </fieldset>
+</div>
