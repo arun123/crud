@@ -1,3 +1,4 @@
+<?php use_stylesheet('table.css') ?>
 <div id="content">
 <?php if ($sf_user->isAuthenticated()): ?>
 <div id="menu">
