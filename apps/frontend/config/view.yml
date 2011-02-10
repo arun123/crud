@@ -14,7 +14,7 @@ default:
 
   stylesheets:    [style.css, table.css]
 
-  javascripts:    []
+  javascripts:    [view.js]
 
   has_layout:     true
   layout:         layout
