@@ -40,9 +40,8 @@ class pagesActions extends sfActions
    }
  
   public function executeDelete(sfWebRequest $request)
-   {
+  {
      $request->checkCSRFProtection();
- 
     try
      {
        $item = Doctrine::getTable('page')->findById($request->getParameter('id'));
