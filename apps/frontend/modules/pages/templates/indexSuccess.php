@@ -9,7 +9,6 @@
  echo link_to('page', 'pages_new');?>
  </div>
  
- 
 <?php if ($pages->count()) { ?>
 <div id="tab">
 <table id="hor-minimalist-b" class="tablesorter">

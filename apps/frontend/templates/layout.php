@@ -8,6 +8,7 @@
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
 </head>
+<body>
  <div id="wrapper">
 	<div id="top">
 		<div id="logo">
@@ -25,6 +26,7 @@
 		</div>
 	</div>
 	
+
     <?php echo $sf_content ?>
    
     <div id="footer_lt">
@@ -42,6 +44,5 @@
     <div id="footer_rt">
     </div>
  </div>
-<body>
 </body>
 </html>

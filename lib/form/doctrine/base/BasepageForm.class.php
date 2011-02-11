@@ -20,7 +20,7 @@ abstract class BasepageForm extends BaseFormDoctrine
       'layout'      => new sfWidgetFormInputText(),
       'title'       => new sfWidgetFormInputText(),
       'body'        => new sfWidgetFormTextarea(),
-      'published'   => new sfWidgetFormInputCheckbox(),
+      'published'   => new sfWidgetFormChoice(array('choices'=>array('0'=>'Not publish','1'=>'Publish'),'default'  => array('1', 1))),
       'description' => new sfWidgetFormInputText(),
       'keywords'    => new sfWidgetFormInputText(),
       'robots'      => new sfWidgetFormInputText(),
