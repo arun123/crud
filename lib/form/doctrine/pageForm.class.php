@@ -13,7 +13,6 @@ class pageForm extends BasepageForm
   public function configure()
   {
     unset($this['created_at'],$this['updated_at']);
-    
     $this->widgetSchema['published'] = new sfWidgetFormChoice(array('choices'=>array('0'=>'Not Published','1'=>'published')));  
     $this->validatorSchema['name'] =new sfValidatorString(array('min_length'=>'4'),array('min_length'=>'minimum 4 character required')) ; 
     $this->validatorSchema['title'] =new sfValidatorString(array('min_length'=>'5'),array('min_length'=>'minimum 5 character required')) ;
