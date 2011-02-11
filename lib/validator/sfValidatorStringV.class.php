@@ -7,8 +7,8 @@ class sfValidatorStringV extends sfValidatorBase
   {
     $this->addOption('min','4');
     $this->addOption('max','10');
-    $this->addMessage('max', '"%value%" must be less than %max_length% character .');
-    $this->addMessage('min', '"%value%" must be greater than %min_length% character. ');
+    $this->addMessage('max', '"%value%" must be less than %max% character .');
+    $this->addMessage('min', '"%value%" must be greater than %min% character. ');
     $this->setMessage('invalid', '"%value%" is not an string.');
   }
  
