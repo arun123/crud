@@ -7,6 +7,7 @@
 	  <?php echo $form['name']->renderLabel(__("Name"),array('class'=>'description', 'for'=>'element_1')); ?> 
 		<div>
 		<?php echo $form['name']->render(); ?> 
+		<?php echo $form['name']->renderError(); ?> 
 		</div><p class="guidelines" id="guide_1"><small>Name of the page</small></p> 
 		</li>		<li id="li_2" >
 	  <?php echo $form['layout']->renderLabel(__("Layout"),array('class'=>'description', 'for'=>'element_2')); ?>
@@ -17,11 +18,13 @@
 	  <?php echo $form['title']->renderLabel(__("Title"),array('class'=>'description', 'for'=>'element_3')); ?> 
 		<div>
 			<?php echo $form['title']->render(); ?>
+			<?php echo $form['title']->renderError(); ?> 
 		</div><p class="guidelines" id="guide_3"><small>Title of the page</small></p> 
 		</li>		<li id="li_4" >
 	 <?php echo $form['body']->renderLabel(__("Body"),array('class'=>'description', 'for'=>'element_4')); ?>
 		<div>
 			 <?php echo $form['body']->render(); ?>
+			 <?php echo $form['body']->renderError(); ?>
 		</div><p class="guidelines" id="guide_4"><small>body of the page</small></p> 
 		</li>		<li id="li_9" >
 		 <?php echo $form['published']->renderLabel(__("Published"),array('class'=>'description', 'for'=>'element_5')); ?>
