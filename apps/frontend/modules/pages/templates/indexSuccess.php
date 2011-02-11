@@ -4,8 +4,12 @@
 <div id="menu">
 </div>
 <?php endif ?>
-
-
+<div id="add_page">
+<?php echo link_to(image_tag('add_page.png','size=20x20'), 'pages_new') ;
+ echo link_to('page', 'pages_new');?>
+ </div>
+ 
+ 
 <?php if ($pages->count()) { ?>
 <div id="tab">
 <table id="hor-minimalist-b" class="tablesorter">
@@ -22,7 +26,7 @@
           <td><?php echo $row->getName(); ?></td>
           <td><?php echo $row->getBody(); ?></td>
           <td><?php echo link_to(image_tag('edit.png','size=15x15'), 'pages_edit',$row) ?>
-             <?php echo link_to(image_tag('add.png','size=15x15'), 'pages_new') ?>
+             
             <?php echo link_to(image_tag('delete.png','size=20x18'), '@pages_delete?id='.$row->getId(), array('method' => 'delete', 'confirm' => __('Are you sure?'), 'class' => 'delete')); ?>
            
           </td>

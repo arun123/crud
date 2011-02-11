@@ -292,3 +292,17 @@ ol, ul {
 #content_form {
  background-color:#f5f3f3;
 }
+#add_page {
+	padding-top:20px;
+	padding-left:50px;
+}
+
+#add_page a {
+color:#777;
+ text-decoration: none;
+}
+#add_page a:hover {
+color:#000;
+ text-decoration: none;
+}
+
