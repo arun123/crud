@@ -17,5 +17,8 @@ class pageForm extends BasepageForm
     $this->validatorSchema['name'] =new sfValidatorString(array('min_length'=>'4'),array('min_length'=>'minimum 4 character required')) ; 
     $this->validatorSchema['title'] =new sfValidatorString(array('min_length'=>'5'),array('min_length'=>'minimum 5 character required')) ;
     $this->validatorSchema['body'] =new sfValidatorString(array('min_length'=>'15'),array('min_length'=>'minimum 15 character required')) ; 
+    $this->validatorSchema['layout'] = new sfValidatorStringV(array());
+    
+    
   }
 }

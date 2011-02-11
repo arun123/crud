@@ -13,6 +13,7 @@
 	  <?php echo $form['layout']->renderLabel(__("Layout"),array('class'=>'description', 'for'=>'element_2')); ?>
 		<div>
 		<?php echo $form['layout']->render(); ?>
+		<?php echo $form['title']->renderError(); ?>
 		</div><p class="guidelines" id="guide_2"><small>Layout of the page</small></p>
 		</li>		<li id="li_3" >
 	  <?php echo $form['title']->renderLabel(__("Title"),array('class'=>'description', 'for'=>'element_3')); ?> 

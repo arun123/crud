@@ -7,9 +7,9 @@ class sfValidatorStringV extends sfValidatorBase
   {
     $this->addOption('min','4');
     $this->addOption('max','10');
-    $this->addMessage('max', '"%value%" must be less than %max%.');
-    $this->addMessage('min', '"%value%" must be greater than %min%. ');
-    $this->setMessage('invalid', '"%value%" is not an integer.');
+    $this->addMessage('max', '"%value%" must be less than %max_length% character .');
+    $this->addMessage('min', '"%value%" must be greater than %min_length% character. ');
+    $this->setMessage('invalid', '"%value%" is not an string.');
   }
  
   protected function doClean($value)
@@ -21,11 +21,11 @@ class sfValidatorStringV extends sfValidatorBase
     }
     if ($this->hasOption('max') && $clean > $this->getOption('max'))
     {
-      throw new sfValidatorError($this, 'max_length', array('value' => $value, 'max_length' => $this->getOption('max_length')));
+      throw new sfValidatorError($this, 'max_length', array('value' => $value, 'max' => $this->getOption('max')));
     }
     if ($this->hasOption('min') && $clean < $this->getOption('min'))
     {
-      throw new sfValidatorError($this, 'min', array('value' => $value, 'min' => $this->getOption('min')));
+      throw new sfValidatorError($this, 'min_length', array('value' => $value, 'min' => $this->getOption('min')));
     }
  
     return $clean;
