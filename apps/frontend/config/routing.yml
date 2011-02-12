@@ -2,6 +2,10 @@ pages:
   class:    sfDoctrineRouteCollection
   options:  { module: pages, model: page }
 
+form:
+  class:    sfDoctrineRouteCollection
+  options:  { module: form, model: page }
+  
 homepage:
   url:   /
   param: { module: welcome, action: index }

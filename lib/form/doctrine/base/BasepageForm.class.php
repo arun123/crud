@@ -20,11 +20,12 @@ abstract class BasepageForm extends BaseFormDoctrine
       'layout'      => new sfWidgetFormInputText(),
       'title'       => new sfWidgetFormInputText(),
       'body'        => new sfWidgetFormTextarea(),
-      'published'   => new sfWidgetFormChoice(array('choices'=>array('0'=>'Not publish','1'=>'Publish'),'default'  => array('1', 1))),
+      'published'   => new sfWidgetFormInputCheckbox(),
       'description' => new sfWidgetFormInputText(),
       'keywords'    => new sfWidgetFormInputText(),
       'robots'      => new sfWidgetFormInputText(),
       'author'      => new sfWidgetFormInputText(),
+      'image'       => new sfWidgetFormInputText(),
       'created_at'  => new sfWidgetFormDateTime(),
       'updated_at'  => new sfWidgetFormDateTime(),
     ));
@@ -40,6 +41,7 @@ abstract class BasepageForm extends BaseFormDoctrine
       'keywords'    => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'robots'      => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'author'      => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'image'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
     ));

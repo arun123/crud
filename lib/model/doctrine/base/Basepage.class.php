@@ -15,6 +15,7 @@
  * @property string $keywords
  * @property string $robots
  * @property string $author
+ * @property string $image
  * 
  * @method integer getId()          Returns the current record's "id" value
  * @method string  getName()        Returns the current record's "name" value
@@ -26,6 +27,7 @@
  * @method string  getKeywords()    Returns the current record's "keywords" value
  * @method string  getRobots()      Returns the current record's "robots" value
  * @method string  getAuthor()      Returns the current record's "author" value
+ * @method string  getImage()       Returns the current record's "image" value
  * @method page    setId()          Sets the current record's "id" value
  * @method page    setName()        Sets the current record's "name" value
  * @method page    setLayout()      Sets the current record's "layout" value
@@ -36,11 +38,12 @@
  * @method page    setKeywords()    Sets the current record's "keywords" value
  * @method page    setRobots()      Sets the current record's "robots" value
  * @method page    setAuthor()      Sets the current record's "author" value
+ * @method page    setImage()       Sets the current record's "image" value
  * 
  * @package    crud
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
+ * @version    SVN: $Id: Builder.php 7691 2011-02-04 15:43:29Z jwage $
  */
 abstract class Basepage extends sfDoctrineRecord
 {
@@ -85,6 +88,10 @@ abstract class Basepage extends sfDoctrineRecord
              'length' => 255,
              ));
         $this->hasColumn('author', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
+        $this->hasColumn('image', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
              ));

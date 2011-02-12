@@ -64,15 +64,22 @@
 		</li>		
 		
 		<li id="li_8" >
-		 <?php echo $form['author']->renderLabel(__("Author"),array('class'=>'description', 'for'=>'element_5')); ?> 
+		 <?php echo $form['author']->renderLabel(__("Author"),array('class'=>'description', 'for'=>'element_9')); ?> 
 		 <div>
 		  <?php echo $form['author']->render(); ?>
 		  </div><p class="guidelines" id="guide_8"><small>Author's Name</small></p> 
 		</li>
 		
+		<li id="li_9" >
+		 <?php echo $form['image']->renderLabel(__("Image"),array('class'=>'description', 'for'=>'element_10')); ?> 
+		 <div>
+		  <?php echo $form['image']->render(); ?>
+		  </div><p class="guidelines" id="guide_9"><small>Upload image</small></p> 
+		</li>
+		
 		<li class="buttons">
-		  <label for="submit">&nbsp;</label>
+	   <label for="submit">&nbsp;</label>
       <input type="submit" value="<?php echo __('Submit'); ?>" />
 		</li>
-  </ul>
+</ul>
 </div>
