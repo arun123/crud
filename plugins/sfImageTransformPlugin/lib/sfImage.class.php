@@ -242,7 +242,7 @@ class sfImage
    */
   public function saveAs($filename, $mime='')
   {
-    if ('' === $mime)
+    if ('' == $mime)
     {
       $mime = $this->autoDetectMIMETypeFromFilename($filename);
     }

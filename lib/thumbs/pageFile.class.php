@@ -72,12 +72,12 @@ class pageFile extends sfValidatedFile
 		}
 
     // avatar
-    $img = new sfImage($this->getTempName(), 'image/jpg');
+    $img = new sfImage($this->getTempName(),'image/jpeg','ImageMagick');
     $img->thumbnail(99,40, 'center');
     $img->setQuality(100);
-    $img->saveAs($tsm);
+    $img->saveAs($tsm,'image/jpeg');
 
-    $img = new sfImage($this->getTempName(), 'image/jpg');
+    $img = new sfImage($this->getTempName(), '');
     $img->thumbnail(200,800, 'center');
     $img->setQuality(100);
     $img->saveAs($tssm);
@@ -100,22 +100,5 @@ class pageFile extends sfValidatedFile
 
 		return is_null($this->path) ? $file : str_replace($this->path.DIRECTORY_SEPARATOR, '', $file);
 	}
-
-  public function generateFilename($extension = '')
-  {
-    $var = $this->sanitize_file_name($this->getOriginalName());
-    return $var.$this->getOriginalExtension();
-  }
-
-  public function sanitize_file_name($filename)
-  {
-    $filename_raw = $filename;
-    $special_chars = array("?", "[", "]", "/", "\\", "=", "<", ">", ":", ";", ",", "'", "\"", "&", "$", "#", "*", "(", ")", "|", "~", "`", "!", "{", "}", chr(0));
-    $filename = str_replace($special_chars, '', $filename);
-    $filename = preg_replace('/[\s-]+/', '-', $filename);
-    $filename = trim($filename, '.-_');
-
-    return $filename;
-  }
   
 }
